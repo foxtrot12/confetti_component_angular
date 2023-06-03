@@ -55,7 +55,7 @@ fakeInputs = {
   targetEl: 'target',
   ratioToTargetSize: 20,
 };
-
+```
 
 ## Development server
 

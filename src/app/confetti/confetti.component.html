@@ -1,0 +1,25 @@
+<div
+  [ngClass]="
+    this.targetEl
+      ? 'absolute confettiCont '
+      : 'heightFull widthFull confettiCont  relative'
+  "
+  [style.top.px]="this.containerTopPos"
+  [style.left.px]="this.containerLeftPos"
+  [style.height.px]="this.containerHeight"
+  [style.width.px]="this.containerWidth"
+>
+  <div
+    *ngFor="let cObj of confettiObjArr"
+    [style.--topPos.%]="cObj.top"
+    [style.--leftPos.%]="cObj.left"
+    [style.background-color]="cObj.color"
+    [style.--rot.Deg]="cObj.rotate"
+    [style.height]="this.heightOfConf"
+    [style.width]="this.widthOfConf"
+    [style.--animationDur.ms]="this.confettiDuration"
+    [style.--animationItr]="this.confettiIteration"
+    [style.--animationDelay.ms]="this.animationDelay"
+    class="confetti absolute"
+  ></div>
+</div>

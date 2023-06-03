@@ -1,0 +1,46 @@
+.confettiCont {
+    --confettiZIndex: 10;
+    z-index: var(--confettiZIndex);
+    .confetti {
+      --animationItr: infinite;
+      --animationDelay: 0;
+  
+      width: 12px;
+      height: 12px;
+      transform: skew(20deg) translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      opacity: 0%;
+  
+      animation: confetti var(--animationDur) var(--animationItr) backwards;
+      animation-delay: var(--animationDelay);
+  
+      @keyframes confetti {
+        0% {
+          left: 50%;
+          top: 50%;
+          rotate: 0deg;
+        }
+        1% {
+          opacity: 100%;
+        }
+        100% {
+          opacity: 0%;
+          left: var(--leftPos);
+          top: var(--topPos);
+          rotate: var(--rot);
+        }
+      }
+    }
+  }
+  
+  .absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .relative {
+    position: relative;
+  }
+  

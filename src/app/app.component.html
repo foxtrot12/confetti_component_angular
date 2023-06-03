@@ -1,0 +1,19 @@
+<div style="top : 50% ; left : 50% ; position : absolute" id="target">
+  target
+</div>
+
+<button (click)="startAnimation()">start confetti</button>
+
+<confetti
+  #ConfettiComponent
+  [COLORS]="fakeInputs.COLORS"
+  [numberOfConfettiObjects]="fakeInputs.numberOfConfettiObjects"
+  [heightOfConf]="fakeInputs.heightOfConf"
+  [widthOfConf]="fakeInputs.widthOfConf"
+  [confettiDuration]="fakeInputs.confettiDuration"
+  [confettiIteration]="fakeInputs.confettiIteration"
+  [initiateAnimationAfterView]="fakeInputs.initiateAnimationAfterView"
+  [animationDelay]="fakeInputs.animationDelay"
+  [targetEl]="fakeInputs.targetEl"
+  [ratioToTargetSize]="fakeInputs.ratioToTargetSize"
+></confetti>
